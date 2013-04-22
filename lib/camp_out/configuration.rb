@@ -14,6 +14,7 @@ module CampOut
     ]
 
     DEFAULT_ADAPTER = Faraday.default_adapter
+    DEFAULT_URL = 'http://api.amp.active.com/camping'
 
     attr_accessor(*VALID_OPTIONS_KEYS)
 
@@ -27,7 +28,7 @@ module CampOut
 
     def reset
       self.adapter = DEFAULT_ADAPTER
-      self.url = 'http://api.amp.active.com/camping'
+      self.url = DEFAULT_URL
       self.api_key = nil
       self.open_timeout = 2
       self.read_timeout = 5
