@@ -4,11 +4,16 @@ module CampOut
   module Connection
 
     def connection
-      Faraday.new(url: url) do |faraday|
-        faraday.response :xml
-        faraday.response :mashify
-        faraday.response :logger, logger
-        faraday.adapter adapter
+      request_options = {
+        open_timeout: open_timeout,
+        timeout: read_timeout
+      }
+
+      Faraday.new(url: url, request: request_options) do |f|
+        f.response :xml
+        f.response :mashify
+        f.response :logger, logger
+        f.adapter adapter
       end
     end
   end
