@@ -2,10 +2,17 @@ module CampOut
   class Client
     module Campgrounds
 
-      CAMPGROUNDS_PATH = 'campgrounds'
-
       def list_campgrounds(options={})
-        get(CAMPGROUNDS_PATH, options)
+        get('campgrounds', options)
+      end
+
+      def get_campground(contract_code, park_id)
+        options = {
+          contractCode: contract_code,
+          parkId: park_id
+        }
+
+        get('campground/details', options)
       end
 
     end
