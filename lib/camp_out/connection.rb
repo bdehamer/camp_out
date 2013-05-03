@@ -7,6 +7,7 @@ module CampOut
       Faraday.new(url: url) do |faraday|
         faraday.response :xml
         faraday.response :mashify
+        faraday.response :logger, logger
         faraday.adapter adapter
       end
     end
