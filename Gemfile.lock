@@ -1,0 +1,41 @@
+PATH
+  remote: .
+  specs:
+    camp_out (0.0.1)
+      faraday (~> 0.8.0)
+      faraday_middleware (~> 0.9.0)
+      hashie (~> 1.2)
+      multi_xml
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    diff-lcs (1.2.4)
+    faraday (0.8.7)
+      multipart-post (~> 1.1)
+    faraday_middleware (0.9.0)
+      faraday (>= 0.7.4, < 0.9)
+    hashie (1.2.0)
+    multi_json (1.7.2)
+    multi_xml (0.5.3)
+    multipart-post (1.2.0)
+    rspec (2.13.0)
+      rspec-core (~> 2.13.0)
+      rspec-expectations (~> 2.13.0)
+      rspec-mocks (~> 2.13.0)
+    rspec-core (2.13.1)
+    rspec-expectations (2.13.0)
+      diff-lcs (>= 1.1.3, < 2.0)
+    rspec-mocks (2.13.1)
+    simplecov (0.7.1)
+      multi_json (~> 1.0)
+      simplecov-html (~> 0.7.1)
+    simplecov-html (0.7.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  camp_out!
+  rspec
+  simplecov
