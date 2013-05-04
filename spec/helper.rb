@@ -1,12 +1,6 @@
-require 'simplecov'
-#require 'simplecov-rcov'
-#SimpleCov.formatter = SimpleCov::Formatter::RcovFormatter
-SimpleCov.start do
-  add_filter '/spec'
-end
+require 'rspec'
 require 'camp_out'
 require 'hashie'
-require 'rspec'
 
 def fixture_path
   File.expand_path("../fixtures", __FILE__)
