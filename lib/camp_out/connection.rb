@@ -1,4 +1,5 @@
 require 'faraday_middleware'
+require 'camp_out/middleware/raise_error'
 
 module CampOut
   module Connection
@@ -10,8 +11,9 @@ module CampOut
       }
 
       Faraday.new(url: url, request: request_options) do |f|
-        f.response :xml
         f.response :mashify
+        f.response :xml
+        f.use CampOut::Middleware::RaiseError
         f.response :logger, logger
         f.adapter adapter
       end

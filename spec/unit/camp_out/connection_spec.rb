@@ -31,6 +31,7 @@ describe CampOut::Connection do
       FaradayMiddleware::ParseXml,
       FaradayMiddleware::Mashify,
       Faraday::Response::Logger,
+      CampOut::Middleware::RaiseError,
       Faraday::Adapter::NetHttp]
 
     handlers.each do |handler|

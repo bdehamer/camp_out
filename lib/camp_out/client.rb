@@ -1,5 +1,6 @@
 require 'camp_out/connection'
 require 'camp_out/request'
+require 'camp_out/errors'
 
 require 'camp_out/client/campgrounds'
 
