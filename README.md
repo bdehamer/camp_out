@@ -5,6 +5,22 @@
 
 Ruby wrapper for the [Active.com Campground API](http://developer.active.com/docs/read/Campground_APIs). 
 
+## Prerequisites
+
+In order to access the Active.com Campground API you need to register for a
+developer account and request and apply an API key.
+
+Use the [account registration page](http://developer.active.com/member/register) to
+sign-up for an account and then visit the [API keys page](http://developer.active.com/apps/mykeys) to request a key for the Campground API.
+
 ## Installation
 
+Install the gem:
+
     [sudo] gem install camp_out
+
+Then, in your application or script:
+
+    require 'camp_out'
+
+
