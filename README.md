@@ -8,7 +8,7 @@ Ruby wrapper for the [Active.com Campground API](http://developer.active.com/doc
 ## Prerequisites
 
 In order to access the Active.com Campground API you need to register for a
-developer account and request and apply an API key.
+developer account and apply for an API key.
 
 Use the [account registration page](http://developer.active.com/member/register) to
 sign-up for an account and then visit the [API keys page](http://developer.active.com/apps/mykeys) to request a key for the Campground API.
