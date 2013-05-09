@@ -39,4 +39,24 @@ describe CampOut::Client do
       subject.get_campground(contract_code, park_id).should eql response
     end
   end
+
+  describe "#list_campsites" do
+
+    let(:contract_code) { 'cc123' }
+    let(:park_id) { 'p456' }
+    let(:options) { { foo: :bar } }
+
+    it "issues a get against the camping/campsites resource" do
+      subject.should_receive(:get).with('camping/campsites', {
+        foo: :bar,
+        contractCode: contract_code,
+        parkId: park_id
+      })
+      subject.list_campsites(contract_code, park_id, options)
+    end
+
+    it "returns the response from the API call" do
+      subject.list_campsites(contract_code, park_id, options).should eql response
+    end
+  end
 end

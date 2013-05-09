@@ -34,5 +34,14 @@ module CampOut
 
       get('campground/details', options)
     end
+
+    def list_campsites(contract_code, park_id, options={})
+      options.merge!({
+        contractCode: contract_code,
+        parkId: park_id
+      })
+
+      get('camping/campsites', options)
+    end
   end
 end
