@@ -47,7 +47,7 @@ describe CampOut::Client do
     let(:options) { { foo: :bar } }
 
     it "issues a get against the camping/campsites resource" do
-      subject.should_receive(:get).with('camping/campsites', {
+      subject.should_receive(:get).with('campsites', {
         foo: :bar,
         contractCode: contract_code,
         parkId: park_id

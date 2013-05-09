@@ -41,7 +41,7 @@ module CampOut
         parkId: park_id
       })
 
-      get('camping/campsites', options)
+      get('campsites', options)
     end
   end
 end
