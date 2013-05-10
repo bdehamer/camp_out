@@ -23,4 +23,16 @@ Then, in your application or script:
 
     require 'camp_out'
 
+## Usage
 
+    client = CampOut.new(api_key: 'a1b2c3x4y5z6')
+    client.list_campgrounds(pstate: 'CA')
+
+or 
+
+    CampOut.configure do |config|
+      config.api_key = 'a1b2c3x4y5z6'
+    end
+
+    client = CampOut.new
+    client.list_campgrounds(pstate: 'CA')
